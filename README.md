@@ -155,7 +155,3 @@ Home screen and mobile view:
 ForestShield is an educational simulation project. It does not provide real-time fire detection, authoritative emergency instructions, or guaranteed real-world evacuation guidance.
 
 In an actual emergency, follow the instructions of your local emergency authorities and call your local emergency number.
-
-## License
-
-No license file is included in this project, so no license has been granted. If you publish the repository, add a license of your choice.
