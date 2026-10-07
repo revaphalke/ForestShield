@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.output/
+.vercel/
+.nitro/
+.tanstack/
+
+# Native C engine build artifacts
+c/*.o
+c/forestshield
+c/forestshield.exe
+
+# Environment files (keep .env.example)
+.env
+.env.*
+!.env.example
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Logs and temp files
+*.log
+npm-debug.log*
+*.tmp
+*.temp

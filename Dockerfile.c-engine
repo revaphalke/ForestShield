@@ -1,0 +1,13 @@
+FROM gcc:14-bookworm AS build
+WORKDIR /app
+COPY c ./c
+COPY config ./config
+RUN gcc -std=c11 -Wall -Wextra -O2 -I./c -c c/graph.c c/dijkstra.c c/queue.c c/priority_queue.c c/server.c && \
+    gcc -std=c11 -Wall -Wextra -O2 -I./c -o c/forestshield graph.o dijkstra.o queue.o priority_queue.o server.o -lm
+FROM debian:bookworm-slim
+WORKDIR /app
+COPY --from=build /app/c ./c
+COPY --from=build /app/config ./config
+COPY public/maps ./public/maps
+EXPOSE 8090
+CMD ["./c/forestshield"]
